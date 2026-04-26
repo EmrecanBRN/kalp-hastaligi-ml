@@ -1,31 +1,30 @@
-# 📈 Borsa Veri Analizi — Apple & Big Tech (2024)
+# 🏥 Kalp Hastalığı Tahmini — Machine Learning
 
 ## 📌 Proje Hakkında
-Bu projede Yahoo Finance API kullanılarak Apple (AAPL), Tesla (TSLA), Google (GOOGL) ve Microsoft (MSFT) hisse senetlerinin 2024 yılı verileri analiz edilmiştir.
+UCI Heart Disease veri seti kullanılarak kalp hastası olup olmadığını tahmin eden bir makine öğrenmesi modeli geliştirilmiştir.
 
-## 📊 Yapılan Analizler
-1. Gerçek borsa verisi çekme (yfinance)
-2. Keşifsel veri analizi (EDA)
-3. Fiyat grafiği & hareketli ortalamalar (MA20, MA50)
-4. Günlük getiri & risk analizi
-5. Kümülatif getiri (1000$ yatırsaydın?)
-6. Çoklu hisse karşılaştırması
-7. Korelasyon ısı haritası
+## 📊 Veri Seti
+- 1025 hasta kaydı, 13 özellik
+- Kaynak: Kaggle — Heart Disease UCI Dataset
+
+## 🤖 Model
+- Algoritma: Random Forest Classifier (100 ağaç)
+- Doğruluk: %98.54
+- Test seti: 205 hasta
+
+## 🔍 En Önemli Faktörler
+1. Göğüs ağrısı tipi (chest_pain_type)
+2. Talasemi (thalassemia)
+3. Boyanan damar sayısı (vessels_colored_by_flourosopy)
+4. ST depresyonu (oldpeak)
+5. Maksimum kalp hızı (Max_heart_rate)
 
 ## 🔧 Kullanılan Teknolojiler
 - Python 3
 - Pandas, NumPy
 - Matplotlib, Seaborn
-- yfinance
-
-## 💡 Öne Çıkan Bulgular
-- AAPL 2024'te %35.6 getiri sağladı
-- TSLA en volatil hisse oldu (%62.6 getiri)
-- GOOGL ve MSFT arasında en yüksek korelasyon (0.57)
-- Mayıs 2024'te MA20/MA50 kesişimi güçlü alım sinyali verdi
+- Scikit-learn (RandomForestClassifier)
 
 ## 🚀 Nasıl Çalıştırılır?
-```bash
-pip install pandas numpy matplotlib seaborn yfinance jupyter
-jupyter notebook borsa_analizi.ipynb
-```
+pip install pandas numpy matplotlib seaborn scikit-learn jupyter
+jupyter notebook kalp_hastaligi.ipynb
